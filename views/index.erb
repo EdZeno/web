@@ -1,4 +1,11 @@
 <div style='border: 3px dashed red'>
-  <h1> My name is <%= @random_name %> </h1>
-<img src='http://bit.ly/1eze8aE' 'border-style: dotted solid;'>
+  <% if @random_name %>
+    <h1> My name is <%= @random_name %> </h1>
+    <% else %>
+  <form>
+    Name:<input type="text" name='name'>
+    <input type='submit' value='submit'>
+  </form>
+  <% end %>
+  <img src='http://bit.ly/1eze8aE' 'border-style: dotted solid;'>
 </div>
